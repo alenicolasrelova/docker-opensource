@@ -67,7 +67,7 @@ pipeline {
                           -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
                           -Dsonar.host.url=https://sonarqube.dev-dockerson.pt \
                           -Dsonar.sources=./${PROJECT_ROOT}/app.js,./${PROJECT_ROOT}/config/db.config.js,./${PROJECT_ROOT}/routes/developers.js \
-                          -Dsonar.login=squ_54b928f06e0105891aa92fceb950501361f444fc \
+                          -Dsonar.login=squ_1b856139d246edfcbc208106f240f10ae166ca4 \
                           -Dsonar.tests=./${PROJECT_ROOT}/test \
                           -Dsonar.javascript.lcov.reportPaths=./${PROJECT_ROOT}/coverage/lcov.info"
             }
