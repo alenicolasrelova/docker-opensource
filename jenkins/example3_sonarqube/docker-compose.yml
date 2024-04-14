@@ -3,7 +3,7 @@ version: "3.8"
 services:
   myjenkins:
     container_name: my_custom_jenkins
-    image: jenkins/jenkins:lts
+    image: jenkins-cicd
     user: root
     environment:
       MY_NAME: "santi_devops"
@@ -15,7 +15,7 @@ services:
       - "50000:50000"
     volumes:
       # Named  Docker volume details at the bottom
-      - jenkins_home:/var/jenkins_home
+      - ./jenkins_home:/var/jenkins_home
       # WARNING:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
@@ -28,7 +28,7 @@ services:
   mysonarqube:
     container_name: my_custom_sonarqube
     # build: ./sonarqube_home
-    image: sonarqube:7.9.5-community
+    image: sonarqube:latest
     environment:
       SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
     ports:
