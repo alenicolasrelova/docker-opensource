@@ -1,4 +1,4 @@
-FROM node
+FROM node:18.20.2-alpine
 
 # Define default ports and host for app and db
 ARG app_port=3000
